@@ -1,0 +1,73 @@
+const Chat = (function(){
+    const myName = "blue";
+ 
+    // init 関数
+    function init() {
+        // enter キーイベント
+        $(document).on('keydown', 'div.input-div textarea', function(e){
+            if(e.keyCode == 13 && !e.shiftKey) {
+                e.preventDefault();
+                const message = $(this).val();
+ 
+                // メッセージ転送
+                sendMessage(message);
+                // 入力box clear
+                clearTextarea();
+            }
+        });
+    }
+ 
+    // メッセージタグ
+    function createMessageTag(LR_className, senderName, message) {
+        // フォーム持ってくる
+        let chatLi = $('div.chat.format ul li').clone();
+ 
+        // 値入れる
+        chatLi.addClass(LR_className);
+        chatLi.find('.sender span').text(senderName);
+        chatLi.find('.message span').text(message);
+ 
+        return chatLi;
+    }
+ 
+    // メッセージタグ append
+    function appendMessageTag(LR_className, senderName, message) {
+        const chatLi = createMessageTag(LR_className, senderName, message);
+ 
+        $('div.chat:not(.format) ul').append(chatLi);
+ 
+        // スクロールバー下に固定
+        $('div.chat').scrollTop($('div.chat').prop('scrollHeight'));
+    }
+ 
+    // メッセージ転送
+    function sendMessage(message) {
+        // サーバーへ転送するコードに変える
+        const data = {
+            "senderName"    : "blue",
+            "message"        : message
+        };
+ 
+        // 通信の機能が無いのでここから receive
+        resive(data);
+    }
+ 
+    // メッセージ入力BOX内容削除
+    function clearTextarea() {
+        $('div.input-div textarea').val('');
+    }
+ 
+    // メッセージ送信
+    function resive(data) {
+        const LR = (data.senderName != myName)? "left" : "right";
+        appendMessageTag("right", data.senderName, data.message);
+    }
+ 
+    return {
+        'init': init
+    };
+})();
+ 
+$(function(){
+    Chat.init();
+});

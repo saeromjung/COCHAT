@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- Description: Kakao PC ver. Clone -->
+<html lang="ko" data-dark="false">
+    <head>
+        <meta charset="utf-=8">
+        <title>KaKao Talk Friend List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="description" content="Kakao Talk Clone Friend List Page">
+        <meta name="keywords" content="KakaoTalk, Clone, Friend">
+        <meta name="robotos" content="noindex, nofollow">
+        <link rel="stylesheet" href="CSS/main-layout.css">
+        <link rel="stylesheet" href="CSS/friend.css">
+        <link rel="stylesheet" href="CSS/general.css">
+        <link rel="stylesheet" href="fontello/css/animation.css">
+        <link rel="stylesheet" href="fontello/css/fontello.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="content">
+            <!-- 설정바(최소화, 닫기 버튼 등) -->
+            <div class="setting_bar">
+                <i class="icon-window-minimize" alt="최소화버튼" title="최소화"></i>
+                <i class="icon-window-maximize" alt="최대화버튼" title="최대화"></i>
+                <i class="icon-cancel" alt="닫기버튼" title="닫기"></i>
+            </div>
+            <!-- 헤더: 제목, 친구 찾기 버튼, 친구 추가 버튼 -->
+            <header>
+                <h1>친구</h1>
+                <span alt="친구추가버튼" title="친구 추가">&#xf234</span>
+                <span alt="통합검색버튼" title="통합검색">&#xe801</span>
+            </header>
+            <!-- 친구창, 대화창, 설정창 등 이동 가능한 네비게이터 -->
+            <nav>
+                <div class="main-menu">
+                    <a href="friend.html">
+                        <i class="icon-adult" alt="친구메뉴" title="친구"></i>
+                    </a>
+                    <a href="chatting.html">
+                        <i class="icon-chat" alt="채팅메뉴" title="채팅"></i>
+                        <span class="alert-balloon" alt="알림수">3</span>
+                    </a>
+                    <a href="more_menu.html">
+                        <i class="icon-ellipsis" alt="더보기버튼" title="더보기"></i>
+                        <span class="alert-balloon" alt="알림수">N</span>
+                    </a>
+                </div>
+                <div class="sub-menu">
+                    <a href="temp.html" target="_blank">
+                        <i class="icon-smile" alt="이모티콘샵바로가기" title="이모티콘샵"></i></a>
+                    <i class="icon-bell" alt="알림버튼" title="알림"></i>
+                    <i class="icon-cog" alt="설정버튼" title="설정"></i>
+                </div>
+            </nav>
+            <!-- 메인: 친구창 메인 내용 -->
+            <main>
+                <!-- 나의 프로필 -->
+                <div>
+                    <ul>
+                        <li>
+                            <img src="./pic/me.png" alt="나의프로필사진">
+                            <div class="profile">
+                                <p>김간장</p>
+                                <p>상태메시지 영역</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 즐겨찾기 프로필 모음-->
+                <div>
+                    <div class="profile-title">
+                        <h2>즐겨찾기</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <img src="./pic/friend1.png" alt="친구1프로필사진">
+                            <div class="profile">
+                                <p>친구1</p>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./pic/friend2.png" alt="친구2프로필사진">
+                            <div class="profile">
+                                <p>친구2</p>
+                                <p>지금 몇시니</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 채널 프로필 모음-->
+                <div>
+                    <div class="profile-title">
+                        <h2>채널</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <img src="./pic/channel.png" alt="채널프로필사진">
+                            <div class="profile">
+                                <p>채널</p>
+                                <p>50</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 친구 프로필 모음 -->
+                <div>
+                    <div class="profile-title">
+                        <h2>친구</h2>
+                        <p>3</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <img src="./pic/default.png" alt="친구3프로필사진">
+                            <div class="profile">
+                                <p>친구3</p>
+                                <p>준비한 사진이 모두 떨어졌다</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./pic/friend1.png" alt="친구1프로필사진">
+                            <div class="profile">
+                                <p>친구1</p>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./pic/friend2.png" alt="친구2프로필사진">
+                            <div class="profile">
+                                <p>친구2</p>
+                                <p>지금 몇시니</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./pic/default.png" alt="뫄뫄프로필사진">
+                            <div class="profile">
+                                <p>뫄뫄 부장님</p>
+                                <p>카톡 X 연락 O</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./pic/default.png" alt="쀼프로필사진">
+                            <div class="profile">
+                                <p>쀼사원</p>
+                                <p>제주도 여행 D-94</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./pic/default.png" alt="베프프로필사진">
+                            <div class="profile">
+                                <p>베프</p>
+                                <p>휴... 쓸말이 다 떨어졌는데 뭐라고 써야 줄이 넘어갈까. 줄이 넘어가면 이렇게 구성됨.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+            <!-- aside: 광고 -->
+            <aside>
+                <img src="./pic/ad.png" alt="광고이미지">
+            </aside>
+        </div>
+    </body>
+</html>

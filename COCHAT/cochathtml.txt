@@ -1,0 +1,29 @@
+<div class="chat_wrap">
+    <div class="header">
+        CHAT
+    </div>
+    <div class="chat">
+        <ul>
+            <!-- 動的 -->
+        </ul>
+    </div>
+    <div class="input-div">
+        <textarea placeholder="Press Enter for send message."></textarea>
+    </div>
+ 
+    <!-- format -->
+ 
+    <div class="chat format">
+        <ul>
+            <li>
+                <div class="sender">
+                    <span></span>
+                </div>
+                <div class="message">
+                    <span></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
